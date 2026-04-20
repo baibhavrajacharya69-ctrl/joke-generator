@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title> generator app</title>
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+            background: linear-gradient(135deg,#1e1e2f, #3a3a6a);
+            color: white;
+            padding-top: 100px;
+        }
+        #output{
+            font-size: 24px;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor:pointer;
+        }
+    
+    </style>
+    </head>
+    <body>
+        <h1 id="title">Joke Generator</h1>
+<p id="output">Click the button to generate a joke! and make your day better!</p>
+<button onclick="generate()">Generate</button>
+<script>
+    const data =[
+   "Why did the programmer quit his job? Because he didn’t get arrays.",
+  "I told my computer I needed a break… it said ‘No problem, I’ll go to sleep.’",
+  "Why do programmers prefer dark mode? Because light attracts bugs.",
+  "I changed my password to ‘incorrect’ so when I forget it, it says ‘your password is incorrect.’",
+  "Why was the JavaScript file sad? Because it didn’t know how to ‘null’ its feelings.",
+  "Debugging: being the detective in a crime movie where you are also the murderer.",
+  "Why do programmers hate nature? It has too many bugs.",
+  "My code doesn’t have bugs… it has undocumented features.",
+  "Why did the coder bring a ladder? To reach the high-level functions.",
+  "I would tell you a UDP joke, but you might not get it."
+];
+function generate() {
+    let random = Math.floor(Math.random()* data.length);
+    document.getElementById("output").innerText = data[random];
+
+}
+</script>
+</body>
+</html>
